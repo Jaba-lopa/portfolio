@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');
+
+@mixin section-text($color, $fz) {
+    color: $color;
+    font-size: $fz;
+    font-family: "Merriweather", serif;
+}
+
+.section-title-span {
+    color: #64ffda;
+    font-family: sans-serif;
+}
+
+.section-title {
+    @include section-text(#ccd6f6, 1.6rem);
+    padding: 40px 0;
+}
+
+main {
+    padding-top: 100px;
+}
+
+@import 'about.scss';
+@import 'work.scss';
+@import 'contact.scss';
+@import 'footer.scss';

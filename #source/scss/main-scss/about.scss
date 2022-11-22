@@ -1,0 +1,120 @@
+.section-name{
+    &>div{
+        div{
+            margin-bottom: 80px;
+            p {
+                @include section-text(grey, 1.5rem);
+                margin-top: 20px;
+            }
+
+            h2 {
+                margin-top: 20px;
+                @include section-text(#ccd6f6, 5rem);
+            }
+
+            h3{
+                @include section-text(#8892B0, 4rem);
+            }
+            p:nth-child(1) {
+                margin-top: 0;
+                margin-bottom: 20px;
+                @include section-text(#64ffda, 1rem);
+            }
+        }
+        a{
+            @include section-text(#64ffda, 1rem);
+            padding: 15px 20px;
+            border: 1px solid #64ffda;
+            transition: 0.2s; 
+            cursor: pointer;
+
+            &:hover{
+                background-color: #000029;
+            }
+        }
+    }
+}
+
+.section-p {
+    @include section-text(grey, 1.2rem);
+}
+
+.about__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    .about__infoWrapper {
+
+        .about__skils {
+            margin-top: 40px;
+
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            
+            .skills__item {
+                @include section-text(grey, 0.8rem);
+                padding: 10px 0;
+                display: flex;
+                align-items: center;
+                img{
+                    width: 30px;
+                }
+            }
+        }
+    }
+
+    .about__imageWrapper {
+        width: 40%;
+        cursor: pointer;
+
+        .about__imageItem {
+            width: 80%;
+            height: 300px;
+            position: relative;
+        }
+
+        .about__image {
+            height: 100%;
+            width: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                min-width: 260px;
+                border-radius: 5px;
+                object-fit: cover;
+            }
+        }
+
+        .about__image:before{
+            content: "";
+            width: 100%;
+            height: 100%;
+            min-width: 260px;
+
+            background-color: #64ffda;
+            position: absolute;
+            mix-blend-mode: multiply;
+            transition: 2.5s;
+        }
+
+        .about__image:after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            min-width: 260px;
+            
+            border-radius: 5px;
+            position: absolute;
+            border: 3px solid #64ffda;
+            left: 5%;
+            top: 5%;
+            z-index: -1;
+            transition: 2.5s;        
+        }
+
+        .about__image:hover:before, .about__image:hover:after {
+            filter: hue-rotate(360deg);
+        }
+    }
+}

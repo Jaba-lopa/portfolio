@@ -1,0 +1,58 @@
+//color: #64ffda; - текст
+//#000029; - header
+//#00004d; - фон
+
+header {
+    position: fixed;   
+    background-color: #000029;
+    height: 100px;
+    width: 100%;
+    z-index: 99;
+}
+
+#headerline{
+    width: 5%;
+    box-shadow: 0px 2px 8px #64ffda;
+    background-color: #64ffda;
+    height: 4px;
+    transition: 0.5s;
+}
+
+.header-content{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__logo {
+    img {
+        width: 150px;
+        height: 70px;
+        cursor: pointer;
+    }
+}
+
+.nav-menu {
+    display: flex;
+    li {
+        font-size: 0.9rem;
+        color: grey;
+        margin-left: 20px;
+        cursor: pointer;
+        transition: 0.2s;
+
+        -webkit-user-select: none;
+        z-index: 999;
+
+        span{
+            color: #64ffda;
+            padding-right: 5px;
+        }
+    }
+    li:hover{
+        color: #fff;
+    }
+}
